@@ -1,0 +1,36 @@
+# Zyko's PC Checker 4 — Terms of Use
+Effective September 20, 2026. Applies with the attribution-preserving LICENSE.
+
+Use the software only on devices and data you are authorized to examine. Before
+examining another person's device, explain the chosen scope, the types of data
+collected, who will receive the report, the retention period and how to contact
+the operator. Obtain informed permission or establish other valid authority.
+The expanded-scan acknowledgement records an operator choice; it does not itself
+establish permission from the device owner. Declining expanded collection must
+not be represented as evidence of cheating.
+
+Expanded collection can reveal sensitive commands, network activity, identifiers,
+file history and system settings. The optional memory inspection has additional
+access requirements. Review the Privacy Policy before enabling these features.
+Protect local caches and exported reports and share them only with authorized
+recipients for the disclosed purpose. No evidence-upload service is provided.
+
+Findings are investigative leads. Names, account changes, unsigned modules,
+private executable memory, deleted files, history gaps and configuration changes
+can have legitimate explanations. Independently corroborate relevant activity,
+file identity, timestamps and attribution. Provide an opportunity to explain or
+contest findings before taking action. Do not claim the software establishes
+guilt, complete coverage or a guaranteed detection/success rate.
+
+Do not use the software for covert surveillance, unauthorized access, harassment,
+extortion, evidence fabrication or unlawful discrimination. Do not bypass device
+access controls to acquire evidence. Read-only collection does not mean zero
+impact: scanning consumes resources, can trigger security software and can cause
+normal operating-system access logs or cache activity.
+
+Custom detection rules are the operator's responsibility. Matches are not vetted
+identities, and rules must not be used to execute scanned files. Some features
+require administrative privileges or optional dependencies; inaccessible or
+unsupported checks are limitations, not negative findings. Update integrity
+checks do not guarantee a release is free of defects. Warranty, liability,
+redistribution, attribution and termination provisions remain in LICENSE.
