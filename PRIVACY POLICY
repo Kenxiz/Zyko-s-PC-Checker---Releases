@@ -1,0 +1,67 @@
+# Zyko's PC Checker 4 — Privacy Policy
+Effective September 20, 2026. Applies to version 4.0.0.
+
+## What an examination accesses
+
+Standard scans examine accessible file metadata and relevant technical content,
+running processes, installed software, execution traces, Roblox configuration and
+logs, account identifiers, download records, Windows history and removable-device
+artifacts. File paths, usernames, account IDs, hashes and timestamps can identify
+people or reveal their activity. Ordinary personal documents and media receive
+limited type checks; a disguised executable may receive deeper examination.
+
+Expanded collection is optional and requires an acknowledgement before each
+scan. It additionally collects process command lines and parent relationships,
+service and driver settings, scheduled task actions, DNS cache entries, WMI
+persistence settings, available Amcache records, restore-point metadata, Windows
+event messages, PowerShell command history and bounded NTFS journal/file-reference
+records. These sources can reveal private activity. Command lines and saved
+commands may contain secrets entered by other software or by a person; automatic
+redaction is not guaranteed. Do not enable this scope without appropriate authority.
+
+The separate memory option reads bounded samples of Roblox executable memory
+pages and records region metadata and PE-header indicators. Raw memory samples
+are discarded after inspection and are not included in reports. This is not a
+complete memory dump or comprehensive injection detector. Protected sources,
+unsupported formats, missing permissions and collection limits affect coverage.
+
+Custom YARA rules inspect eligible executable and script bytes locally. Rule
+matches, names and tags may be reported. Rules are operator supplied; their
+accuracy is not guaranteed. Do not put private information in rule names or tags.
+
+## Storage, sharing and network connections
+
+Collected inventory and findings remain in application memory until the session
+ends unless the operator exports a JSON or HTML report. Exports include the
+expanded inventory when enabled, collection limitations and a source timeline.
+Exports are not encrypted by the application. The local scan cache under
+`%LOCALAPPDATA%/ZykoPCChecker/scan-cache.sqlite3` retains file paths, identity
+metadata, hashes and cached analysis to accelerate later scans. A configured
+custom cache path takes precedence. Closing the app does not delete this cache.
+
+The app does not automatically upload scan evidence, history, memory samples or
+reports. Its update checks and downloads contact the configured release service;
+that service receives normal network metadata, such as the connecting IP address.
+Windows signature validation may use Windows-managed certificate services.
+Sharing an exported report is a separate action controlled by the operator.
+
+## Retention and control
+
+You may decline expanded collection, stop a running scan or close the app. A
+cancelled report can contain evidence already collected. Delete unwanted exported
+reports and, after closing the app, the local cache and its SQLite sidecar files
+to remove application-retained data. Other recipients and operating-system backups
+may retain copies; the app cannot delete those remotely. There is no application
+cloud account or central evidence store in this build.
+
+Operators must restrict report access, choose and communicate a retention period,
+and provide an appropriate contact for questions or deletion requests before
+collecting another person's data. The application does not know the operator's
+contact details and cannot answer requests on their behalf.
+
+## Accuracy and changes
+
+Collection is broader in version 4, but a greater amount of personal data does
+not guarantee better detection. Contextual activity is not proof of misconduct.
+Coverage records distinguish unavailable, partial and unsupported checks.
+Future changes to collection require corresponding policy and interface updates.
