@@ -57,6 +57,64 @@ that service receives normal network metadata, such as the connecting IP address
 Windows signature validation may use Windows-managed certificate services.
 Sharing an exported report is a separate action controlled by the operator.
 
+## Third-party software acknowledgements and services
+
+This product includes software developed by SecureAuth Corporation
+(https://www.secureauth.com/) and Fortra (https://www.fortra.com). It uses the
+read-only ESE parser and structure utilities from Impacket 0.13.1 under its
+modified Apache Software License 1.1. The prepared runtime excludes Impacket's
+networking modules and command-line tools.
+
+Other components include Python, Tcl/Tk, cryptography, cffi, pycparser, pefile,
+yara-python/YARA, six, and ppdeep by Marcin Ulikowski, based on SpamSum by Andrew
+Tridgell. PyInstaller packages the executable. See THIRD_PARTY.md for attribution
+and the release's bundled `licenses/` files for applicable license terms,
+copyright notices, disclaimers and exceptions. The app's About, terms & privacy
+dialog also displays the third-party notices and bundled license texts.
+Third-party licenses govern their respective components and take precedence over
+conflicting product restrictions; this policy does not replace those licenses.
+Acknowledgement does not imply sponsorship, affiliation or endorsement.
+
+Bundled libraries process data locally for the features described above. Their
+inclusion does not itself send scan evidence to their authors. Network services
+are separate from these local components:
+
+- **GitHub release services:** Update checks request release information from
+  GitHub's API for `Kenxiz/Zyko-s-PC-Checker---Releases`; downloads request release
+  assets and checksums through GitHub and its delivery infrastructure. Requests
+  expose the connecting IP address, requested URL, request time and HTTP headers,
+  including a User-Agent identifying the product and its installed version.
+  These requests do not attach scan evidence or reports. GitHub's handling of
+  service data is described in its
+  [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+- **Configured rule-feed providers:** When a trusted feed is configured, the app
+  requests rule bundles from that HTTPS URL. The provider and any redirect or
+  delivery service receive connection metadata, the requested URL and a
+  User-Agent identifying the rule updater. These requests do not attach scan
+  evidence. Information or tokens placed in the configured URL are also sent;
+  do not put scan evidence or personal identifiers in it. The operator must
+  identify the provider and review its privacy terms before configuring a feed.
+- **Windows certificate services:** Signature and certificate-chain checks may
+  contact Microsoft or certificate-authority endpoints to retrieve certificates
+  or revocation status. Depending on the check, endpoints may receive connection
+  metadata and certificate identifiers. These are Windows-managed requests, not
+  report uploads. Microsoft's practices are described in its
+  [Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement);
+  other certificate providers have their own policies.
+- **Operator-selected recipients:** If an operator sends a report through email,
+  messaging, a support channel or cloud storage, those recipients and services
+  receive the shared content. Saving reports or caches in a synchronized folder
+  can also cause other software to upload them. Review recipients, access controls
+  and service policies before sharing or choosing such a location.
+
+External providers may retain service logs or process data in other countries
+under their own policies. Local deletion does not delete their records; consult
+the relevant provider for retention, contact details and available privacy
+requests. This acknowledgement is not blanket consent to share data, does not
+waive privacy rights, and does not remove obligations imposed by applicable law
+on the publisher or operator. Before examining another person's device, disclose
+the applicable services and recipients as part of the examination scope.
+
 ## Retention and control
 
 You may decline expanded collection, stop a running scan or close the app. A
